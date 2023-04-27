@@ -11,8 +11,8 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // Your code here
-    }
-  };
+      Band.hasMany(models.Musician)
+  }};
   Band.init({
     name: {
       type: DataTypes.STRING,
